@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Camera.gd" type="Script" id=1]
-[ext_resource path="res://ShaderControlTest.gd" type="Script" id=2]
-[ext_resource path="res://RGBYXZMaterial.material" type="Material" id=3]
+[ext_resource path="res://Script/Camera.gd" type="Script" id=1]
+[ext_resource path="res://Script/ShaderControlTest.gd" type="Script" id=2]
+[ext_resource path="res://Textures/RGBYXZMaterial.material" type="Material" id=3]
 [ext_resource path="res://default_env.tres" type="Environment" id=4]
 
 [sub_resource type="CubeMesh" id=1]

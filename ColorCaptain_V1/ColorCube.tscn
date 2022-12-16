@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://RGBYXZMaterial.material" type="Material" id=1]
-[ext_resource path="res://ColorCube.gd" type="Script" id=2]
-[ext_resource path="res://CandraFont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Textures/RGBYXZMaterial.material" type="Material" id=1]
+[ext_resource path="res://Script/ColorCube.gd" type="Script" id=2]
+[ext_resource path="res://UI/CandraFont.tres" type="DynamicFont" id=3]
 
 [sub_resource type="CubeMesh" id=1]
 
