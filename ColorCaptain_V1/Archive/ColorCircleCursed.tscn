@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI/CandraFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Textures/RGBYXZMaterial.material" type="Material" id=2]
+[ext_resource path="res://Script/ColorCircleHSV.gd" type="Script" id=3]
+
+[sub_resource type="CylinderMesh" id=1]
+radial_segments = 12
+
+[node name="CubeCircle" type="Spatial"]
+script = ExtResource( 3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+material/0 = ExtResource( 2 )
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.496007, 1.01025 )
+modulate = Color( 0, 0, 0, 1 )
+outline_modulate = Color( 1, 1, 1, 1 )
+text = "Words here"
+font = ExtResource( 1 )
+uppercase = true
+
+[node name="Label3D2" type="Label3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00482497, 0.780217, 1.01025 )
+modulate = Color( 0, 0, 0, 1 )
+outline_modulate = Color( 0.521569, 0.160784, 0.584314, 1 )
+text = "Words here"
+font = ExtResource( 1 )
+uppercase = true

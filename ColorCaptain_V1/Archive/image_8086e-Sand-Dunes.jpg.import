@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/image_8086e-Sand-Dunes.jpg-51ee9f227b9308b198073f7d079103cf.s3tc.stex"
-path.etc="res://.import/image_8086e-Sand-Dunes.jpg-51ee9f227b9308b198073f7d079103cf.etc.stex"
+path.s3tc="res://.import/image_8086e-Sand-Dunes.jpg-f85d4fb4081857a31b14526922bb4e08.s3tc.stex"
+path.etc="res://.import/image_8086e-Sand-Dunes.jpg-f85d4fb4081857a31b14526922bb4e08.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/image_8086e-Sand-Dunes.jpg"
-dest_files=[ "res://.import/image_8086e-Sand-Dunes.jpg-51ee9f227b9308b198073f7d079103cf.s3tc.stex", "res://.import/image_8086e-Sand-Dunes.jpg-51ee9f227b9308b198073f7d079103cf.etc.stex" ]
+source_file="res://Archive/image_8086e-Sand-Dunes.jpg"
+dest_files=[ "res://.import/image_8086e-Sand-Dunes.jpg-f85d4fb4081857a31b14526922bb4e08.s3tc.stex", "res://.import/image_8086e-Sand-Dunes.jpg-f85d4fb4081857a31b14526922bb4e08.etc.stex" ]
 
 [params]
 

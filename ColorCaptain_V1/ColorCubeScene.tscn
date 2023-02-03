@@ -1,23 +1,25 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://ColorCube.tscn" type="PackedScene" id=1]
 [ext_resource path="res://UI/CandraFont.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Script/Camera.gd" type="Script" id=3]
-[ext_resource path="res://Pause.gd" type="Script" id=4]
-[ext_resource path="res://Textures/FloorMaterial.tres" type="Material" id=5]
+[ext_resource path="res://Script/Pause.gd" type="Script" id=4]
+[ext_resource path="res://SceneBase.tscn" type="PackedScene" id=5]
 [ext_resource path="res://UI/NinePanelGray.png" type="Texture" id=6]
 [ext_resource path="res://Script/GitLinkButton.gd" type="Script" id=7]
 [ext_resource path="res://Script/ColorLinkButton.gd" type="Script" id=8]
-[ext_resource path="res://Models/Mountian Ring.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Models/Land Ring.tscn" type="PackedScene" id=10]
-[ext_resource path="res://PlayMobile.gd" type="Script" id=11]
+[ext_resource path="res://Models/Zepllin.tscn" type="PackedScene" id=9]
 
-[sub_resource type="CylinderMesh" id=1]
+[sub_resource type="Curve3D" id=1]
+_data = {
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -0.209156, -0.519587, 0.0690403, 0, 0, 0, 0, 0, 0, -0.0386152, 25.807, -3.96483, 0, 0, 0, 0, 0, 0, -0.03862, 25.9683, -8.82583, 0, 0, 0, 0, 0, 0, -13.9114, -19.3161, -9.33666, 0, 0, 0, 0, 0, 0, -13.9114, -19.3315, -37.314, 0, 0, 0, 0, 0, 0, 14.0937, -19.4029, -9.33947, 0, 0, 0, 0, 0, 0, 14.1122, 13.8965, -9.0069, 0, 0, 0, 0, 0, 0, 14.1122, 13.8482, -37.2413, 0, 0, 0, 0, 0, 0, -13.7616, 12.4929, -37.8532, 0, 0, 0, 0, 0, 0, -12.8823, 20.9895, 17.678, 0, 0, 0, 0, 0, 0, 16.6924, -18.6989, -42.2061 ),
+"tilts": PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+}
 
 [node name="Scene" type="Spatial"]
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.65249, 24.7629 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.65249, 22.9985 )
 script = ExtResource( 3 )
 
 [node name="Control" type="Control" parent="."]
@@ -25,6 +27,8 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+margin_top = -1.0
+margin_bottom = -1.0
 script = ExtResource( 4 )
 
 [node name="PausePanel" type="Control" parent="Control"]
@@ -75,9 +79,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -179.0
-margin_top = -117.0
-margin_right = 184.0
+margin_left = -318.0
+margin_top = -127.0
+margin_right = 359.0
 margin_bottom = 107.0
 grow_horizontal = 0
 grow_vertical = 0
@@ -127,7 +131,7 @@ margin_top = -216.0
 margin_right = -351.0
 margin_bottom = -202.0
 rect_scale = Vector2( 1.4, 1.4 )
-text = "Version 1.2"
+text = "Version 1.4 beta"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/PausePanel"]
 anchor_left = 0.092
@@ -177,11 +181,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -84.0
-margin_top = -98.0
-margin_bottom = -78.0
+margin_left = -86.0001
+margin_top = -105.0
+margin_right = -2.00006
+margin_bottom = -85.0
 rect_scale = Vector2( 2, 2 )
-text = "Play "
+text = "Play RGB"
 
 [node name="PlayMobile" type="Button" parent="Control/PausePanel"]
 pause_mode = 2
@@ -189,13 +194,49 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -88.0001
-margin_top = 118.0
-margin_right = -4.00006
-margin_bottom = 138.0
+margin_left = -92.0001
+margin_top = 121.0
+margin_right = -5.00007
+margin_bottom = 141.0
 rect_scale = Vector2( 2, 2 )
-text = "Mobile"
-script = ExtResource( 11 )
+text = "Mobile RGB"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Control/PausePanel"]
+anchor_left = 0.092
+anchor_right = 0.202
+margin_left = 102.0
+margin_top = 119.0
+margin_right = 422.0
+margin_bottom = 194.0
+custom_fonts/mono_font = ExtResource( 2 )
+text = "Beta featutre is still in devolpment ,  it may 
+not run or have texture errors."
+
+[node name="PlayHSVButton" type="Button" parent="Control/PausePanel"]
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -300.0
+margin_top = -108.0
+margin_right = -216.0
+margin_bottom = -88.0
+rect_scale = Vector2( 2, 2 )
+text = "HSV"
+
+[node name="PlayHSLButton" type="Button" parent="Control/PausePanel"]
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 160.0
+margin_top = -110.0
+margin_right = 244.0
+margin_bottom = -90.0
+rect_scale = Vector2( 2, 2 )
+text = "HSL"
 
 [node name="GameUI" type="Control" parent="Control"]
 anchor_left = -12.3
@@ -2602,20 +2643,20 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -15.99, 16.0298 )
 [node name="Cube9" parent="ColorCube/Layer9/Row9" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -15.99, 16.0284 )
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( 42.8921, 0, 0, 0, 2.00761, 0, 0, 0, 42.8921, 0, -26.9459, 0 )
-mesh = SubResource( 1 )
-material/0 = ExtResource( 5 )
+[node name="Base" parent="." instance=ExtResource( 5 )]
+transform = Transform( 42.8921, 0, 0, 0, 2.00761, 0, 0, 0, 42.8921, 0, -24.2911, 0 )
 
-[node name="Land Ring" parent="." instance=ExtResource( 10 )]
-transform = Transform( 22.7513, 0, 0, 0, 2.66592, 0, 0, 0, 40.5284, 0, -23.9347, 0 )
-skeleton = NodePath("../Mountian Ring")
+[node name="Zepllin" parent="." instance=ExtResource( 9 )]
+transform = Transform( -0.913487, 0, -8.74228e-08, 0, 0.913487, 0, 7.98596e-08, 0, -1, 0.00562668, 28.5937, -31.3141 )
 
-[node name="Mountian Ring" parent="." instance=ExtResource( 9 )]
-transform = Transform( 54.9571, 0, 0, 0, 54.9571, 0, 0, 0, 54.9571, 0, -20.9594, 0 )
+[node name="Path" type="Path" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.04022, 23.2484 )
+curve = SubResource( 1 )
 
 [connection signal="button_down" from="Control/PausePanel/PlayButton" to="Control" method="_on_PlayButton_button_down"]
 [connection signal="button_up" from="Control/PausePanel/PlayMobile" to="Control" method="_on_PlayMobile_button_up"]
+[connection signal="pressed" from="Control/PausePanel/PlayHSVButton" to="Control" method="_on_PlayHSVButton_pressed"]
+[connection signal="button_up" from="Control/PausePanel/PlayHSLButton" to="Control" method="_on_PlayHSLButton_button_up"]
 [connection signal="button_up" from="Control/MobileUI/PauseButton" to="Control" method="_on_PauseButton_button_up"]
 [connection signal="button_down" from="Control/MobileUI/Button" to="Camera" method="_on_Button_button_down"]
 [connection signal="button_up" from="Control/MobileUI/Button" to="Camera" method="_on_Button_button_up"]

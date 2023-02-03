@@ -2,7 +2,7 @@
 
 [ext_resource path="res://UI/CandraFont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Textures/RGBYXZMaterial.material" type="Material" id=2]
-[ext_resource path="res://Script/ColorCircle.gd" type="Script" id=3]
+[ext_resource path="res://Script/ColorCircleHSV.gd" type="Script" id=3]
 
 [sub_resource type="CylinderMesh" id=1]
 radial_segments = 12

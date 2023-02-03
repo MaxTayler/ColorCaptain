@@ -34,5 +34,13 @@ func _on_mobile():
 
 
 
+func _on_PlayHSLButton_button_up():
+	get_tree().change_scene("res://TestSceneCircleHSL.tscn")
 
 
+func _on_PlayHSVButton_pressed():
+	get_tree().change_scene("res://TestSceneCircleHSV.tscn")
+
+
+func _on_Button_button_up():
+	get_tree().change_scene("res://ColorCubeScene.tscn")

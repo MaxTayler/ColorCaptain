@@ -1,45 +1,27 @@
 extends Spatial
 
-# the that is pre writen before the hsv 
-
-# get position of object realitive global origin 	
+# get position of object	
+#var current_scene = get_global_transform_interpolated()
 onready var x = global_transform.origin.x#get_node("/root/TestScene").get_translation()
 onready var y = global_transform.origin.y#get_node("/root/TestScene").get_translation()
 onready var z = global_transform.origin.z#get_node("/root/TestScene").get_translation()
 #setup color
-var color = Color(0,0,0,0)
-
+var color = Color(0,0,0)
 #set up rgb values 1 is max value 
-var r = 0.5 
-var g = 0.5
-var b = 0.5
+var r = 1 
+var g = 1
+var b = 1
 # value diffrents  
-var i = 0.04 # 
-var h = 0.06
+var i = 0.065 # 
 
 func _ready():
-	#calculate color value based on position
-	 
-	var go = Vector2(0,0) #global origin 
-	var lo = Vector2(z,x) #local origin
-	var degree = rad2deg(lo.angle_to_point(go))
-	var dist = Vector3(0,0,0).distance_to(Vector3(x,0,z))
-	
-	var color = Color.from_hsv(degree/360,dist*0.2,y*0.2,1)
-	
-	#r += stepify(y*i,0.01) 
-	#g += stepify(y*i,0.01) 
-	#b += stepify(y*i,0.01) 
-	
-	#increaase decrease "hue"
-	#r += stepify(z*h,0.01) 
-	#g += stepify(x*h,0.01)
-	#b += stepify(x*h,0.01)
-	
-	#r = clamp(r,0,1)
-	#g = clamp(g,0,1)
-	#b = clamp(b,0,1)
-	
+	_start()
+
+func _start():
+	#calculate color value based on position 
+	r += stepify(x*i,0.01) 
+	g += stepify(y*i,0.01)
+	b += stepify(z*i,0.01)
 	#set color based on location
 	color = Color(r,g,b)
 	var material = $MeshInstance.get_surface_material(0) #material 
@@ -54,8 +36,3 @@ func _ready():
 	var b_val = round(128*color[2])
 	var rgb = Vector3(r_val,g_val,b_val)
 	$Label3D2.set_text(String(rgb))
-	#print(" X:",x," Y:",y," Z:",z)
-	#print(" GlobalOrigin:",go," localOrigin: ",lo)
-	#print(degree)
-	print(dist)
-	

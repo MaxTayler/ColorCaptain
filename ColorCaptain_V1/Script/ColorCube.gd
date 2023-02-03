@@ -14,7 +14,14 @@ var b = 1
 # value diffrents  
 var i = 0.065 # 
 
-func _ready():
+func _ready(): 
+	_update()
+	
+func _update():
+	x = global_transform.origin.x
+	y = global_transform.origin.y
+	z = global_transform.origin.z
+	
 	#calculate color value based on position 
 	r += stepify(x*i,0.01) 
 	g += stepify(y*i,0.01)

@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Kanny Ridge.glb-2eb0f111957827a6db48236bfc70b6f9.scn"
+path="res://.import/ColCap_3D_asset_pack_2.glb-9fd5b8226568d60a902de7f167f33d7b.scn"
 
 [deps]
 
-source_file="res://BlenderImport/Kanny Ridge.glb"
-dest_files=[ "res://.import/Kanny Ridge.glb-2eb0f111957827a6db48236bfc70b6f9.scn" ]
+source_file="res://Archive/Asset2/ColCap_3D_asset_pack_2.glb"
+dest_files=[ "res://.import/ColCap_3D_asset_pack_2.glb-9fd5b8226568d60a902de7f167f33d7b.scn" ]
 
 [params]
 
